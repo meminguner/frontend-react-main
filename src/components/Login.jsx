@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "./Header";
 import { Button, ButtonGroup, ButtonToolbar } from "rsuite";
-import "rsuite/dist/rsuite.min.css";
+//import "rsuite/dist/rsuite.min.css";
 import { Route, useNavigate } from "react-router-dom";
 
 function Login() {

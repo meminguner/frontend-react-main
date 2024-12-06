@@ -2,6 +2,8 @@ import React from "react";
 import Header from "./Header";
 import { Button, ButtonGroup, ButtonToolbar } from "rsuite";
 //import "rsuite/dist/rsuite.min.css";
+import "rsuite/Button/styles/index.css";
+
 import { Route, useNavigate } from "react-router-dom";
 
 function Register() {
@@ -40,26 +42,27 @@ function Register() {
           name="psw"
           required
         />
+        <div class="rsuite-container">
+          <ButtonToolbar>
+            <Button
+              appearance="link"
+              color="red"
+              type="submit"
+              onClick={girisClick}
+            >
+              Giriş yap
+            </Button>
 
-        <ButtonToolbar>
-          <Button
-            appearance="link"
-            color="red"
-            type="submit"
-            onClick={girisClick}
-          >
-            Giriş yap
-          </Button>
-
-          <Button
-            appearance="default"
-            color="red"
-            type="submit"
-            onClick={kayitClick}
-          >
-            Kayıt ol
-          </Button>
-        </ButtonToolbar>
+            <Button
+              appearance="default"
+              color="red"
+              type="submit"
+              onClick={kayitClick}
+            >
+              Kayıt ol
+            </Button>
+          </ButtonToolbar>
+        </div>
       </div>
 
       <hr />

@@ -2,6 +2,8 @@ import React from "react";
 import Header from "./Header";
 import { Button, ButtonGroup, ButtonToolbar } from "rsuite";
 //import "rsuite/dist/rsuite.min.css";
+import "rsuite/Button/styles/index.css";
+
 import { Route, useNavigate } from "react-router-dom";
 
 function Login() {
@@ -36,8 +38,29 @@ function Login() {
           name="psw"
           required
         />
+        <div className="rsuite-container">
+          <ButtonToolbar>
+            <Button
+              appearance="link"
+              color="red"
+              type="submit"
+              onClick={kayitClick}
+            >
+              Kayıt ol
+            </Button>
 
-        <ButtonToolbar>
+            <Button
+              appearance="default"
+              color="red"
+              type="submit"
+              onClick={girisClick}
+            >
+              Giriş yap
+            </Button>
+          </ButtonToolbar>
+        </div>
+
+        {/* <ButtonToolbar>
           <Button
             appearance="link"
             color="red"
@@ -55,7 +78,7 @@ function Login() {
           >
             Giriş yap
           </Button>
-        </ButtonToolbar>
+        </ButtonToolbar> */}
       </div>
 
       <hr />
